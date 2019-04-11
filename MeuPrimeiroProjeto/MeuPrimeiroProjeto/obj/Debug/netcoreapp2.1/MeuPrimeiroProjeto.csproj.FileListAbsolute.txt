@@ -1,0 +1,11 @@
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin\Debug\netcoreapp2.1\MeuPrimeiroProjeto.deps.json
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin\Debug\netcoreapp2.1\MeuPrimeiroProjeto.runtimeconfig.json
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin\Debug\netcoreapp2.1\MeuPrimeiroProjeto.runtimeconfig.dev.json
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin\Debug\netcoreapp2.1\MeuPrimeiroProjeto.dll
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin\Debug\netcoreapp2.1\MeuPrimeiroProjeto.pdb
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj\Debug\netcoreapp2.1\MeuPrimeiroProjeto.csprojAssemblyReference.cache
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj\Debug\netcoreapp2.1\MeuPrimeiroProjeto.csproj.CoreCompileInputs.cache
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj\Debug\netcoreapp2.1\MeuPrimeiroProjeto.AssemblyInfoInputs.cache
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj\Debug\netcoreapp2.1\MeuPrimeiroProjeto.AssemblyInfo.cs
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj\Debug\netcoreapp2.1\MeuPrimeiroProjeto.dll
+c:\users\senacrs\source\repos\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj\Debug\netcoreapp2.1\MeuPrimeiroProjeto.pdb

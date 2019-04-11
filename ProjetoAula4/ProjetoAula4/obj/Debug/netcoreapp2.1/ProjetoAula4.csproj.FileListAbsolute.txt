@@ -1,0 +1,11 @@
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\bin\Debug\netcoreapp2.1\ProjetoAula4.deps.json
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\bin\Debug\netcoreapp2.1\ProjetoAula4.runtimeconfig.json
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\bin\Debug\netcoreapp2.1\ProjetoAula4.runtimeconfig.dev.json
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\bin\Debug\netcoreapp2.1\ProjetoAula4.dll
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\bin\Debug\netcoreapp2.1\ProjetoAula4.pdb
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\obj\Debug\netcoreapp2.1\ProjetoAula4.csprojAssemblyReference.cache
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\obj\Debug\netcoreapp2.1\ProjetoAula4.csproj.CoreCompileInputs.cache
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\obj\Debug\netcoreapp2.1\ProjetoAula4.AssemblyInfoInputs.cache
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\obj\Debug\netcoreapp2.1\ProjetoAula4.AssemblyInfo.cs
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\obj\Debug\netcoreapp2.1\ProjetoAula4.dll
+c:\users\senacrs\source\repos\ProjetoAula4\ProjetoAula4\obj\Debug\netcoreapp2.1\ProjetoAula4.pdb

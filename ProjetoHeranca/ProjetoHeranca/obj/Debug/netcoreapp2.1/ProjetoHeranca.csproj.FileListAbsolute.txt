@@ -1,0 +1,11 @@
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\bin\Debug\netcoreapp2.1\ProjetoHeranca.deps.json
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\bin\Debug\netcoreapp2.1\ProjetoHeranca.runtimeconfig.json
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\bin\Debug\netcoreapp2.1\ProjetoHeranca.runtimeconfig.dev.json
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\bin\Debug\netcoreapp2.1\ProjetoHeranca.dll
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\bin\Debug\netcoreapp2.1\ProjetoHeranca.pdb
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\obj\Debug\netcoreapp2.1\ProjetoHeranca.csprojAssemblyReference.cache
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\obj\Debug\netcoreapp2.1\ProjetoHeranca.csproj.CoreCompileInputs.cache
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\obj\Debug\netcoreapp2.1\ProjetoHeranca.AssemblyInfoInputs.cache
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\obj\Debug\netcoreapp2.1\ProjetoHeranca.AssemblyInfo.cs
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\obj\Debug\netcoreapp2.1\ProjetoHeranca.dll
+C:\Users\senacrs\source\repos\ProjetoHeranca\ProjetoHeranca\obj\Debug\netcoreapp2.1\ProjetoHeranca.pdb

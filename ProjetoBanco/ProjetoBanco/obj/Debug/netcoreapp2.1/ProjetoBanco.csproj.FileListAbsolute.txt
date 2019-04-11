@@ -1,0 +1,11 @@
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\bin\Debug\netcoreapp2.1\ProjetoBanco.deps.json
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\bin\Debug\netcoreapp2.1\ProjetoBanco.runtimeconfig.json
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\bin\Debug\netcoreapp2.1\ProjetoBanco.runtimeconfig.dev.json
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\bin\Debug\netcoreapp2.1\ProjetoBanco.dll
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\bin\Debug\netcoreapp2.1\ProjetoBanco.pdb
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\obj\Debug\netcoreapp2.1\ProjetoBanco.csprojAssemblyReference.cache
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\obj\Debug\netcoreapp2.1\ProjetoBanco.csproj.CoreCompileInputs.cache
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\obj\Debug\netcoreapp2.1\ProjetoBanco.AssemblyInfoInputs.cache
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\obj\Debug\netcoreapp2.1\ProjetoBanco.AssemblyInfo.cs
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\obj\Debug\netcoreapp2.1\ProjetoBanco.dll
+c:\users\senacrs\source\repos\ProjetoBanco\ProjetoBanco\obj\Debug\netcoreapp2.1\ProjetoBanco.pdb
