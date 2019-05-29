@@ -65,10 +65,23 @@ bla
  </details>
  <details>
   <summary>Program.cs</summary>
-bla
+ Aarquivo principal responsável por inicializar a aplicação por meio do método _public void main_.
  </details>
  <details>
   <summary>Startup.cs</summary>
 bla
  </details>
  
+## Executando o projeto
+
+Para **apenas compilar** o projeto, precione **Ctrl+Shift+B** no teclado e você deverá visializar a seguinte mensagem de saída:
+
+
+Já para compilar e subir a aplicação há duas opções:
+
+ - Com Debug
+   - F5
+Sem Debug
+   - CTRL+F5
+
+ > http://[servidor]:[porta]/NomeController/Action/value
