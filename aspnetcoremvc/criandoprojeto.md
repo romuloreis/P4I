@@ -90,3 +90,16 @@ Sem Debug
 
 
  > http://[servidor]:[porta]/NomeController/Action/value
+ 
+ ## Commit do projeto
+ 
+ Se a opção de criar um repositório de forma automática foi selecionada na etapa de criação do projeto, basta executar o seguintes comandos git no diretório do projeto.
+ 
+ ```bash
+ #Associar o projeto local ao diretório do github
+ git remote add origin https://github.com/nome_usuario/nome_diretorio.git
+ #Suba o código
+ git push -u origin master
+ #Informe suas credenciais
+ ```
+ 
