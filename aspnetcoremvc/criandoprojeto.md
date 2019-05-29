@@ -12,11 +12,17 @@ Na lateral esquerda da janela _New Project_ abra as guias _installed - Visual C#
 
 Figura 2. Criando novo projeto
 
+Nesta tela selecione a versão 2.1 do ASP.NET Core e o template para projeto _Web Application (Model - View - Controller)_ (Fig. 3)
+
 ![Second_img](/aspnetcoremvc/assets/img/ambiente03.png)
 
-Figura 2. Criando novo projeto
+Figura 3. Criando novo projeto
 
+
+# Entendo a estrutura de diretórios/pastas do projeto
+
+Ao criar um novo projeto ASP.NET Core MVC, será criada um estrutura de diretórios e arquivos, como pode ser visiualizado em _Solution Explorer_ na lateral direita do Visual Studio (Fig. 4).
 
 ![Second_img](/aspnetcoremvc/assets/img/ambiente06.png)
 
-Figura 2. Selecionando atualização.
+Figura 4. Estrutura do projeto no Solution Explorer.
