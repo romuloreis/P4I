@@ -81,7 +81,12 @@ Já para compilar e subir a aplicação há duas opções:
 
  - Com Debug
    - F5
+   - Necessário reiniciar para aplicar alterações no código
 Sem Debug
    - CTRL+F5
+   - Alterações em tempo real
+   - Possibilidade de paras a execução do servidor web IIS Express de forma manual
+
+
 
  > http://[servidor]:[porta]/NomeController/Action/value
