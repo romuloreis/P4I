@@ -130,6 +130,12 @@ git remote add origin https://github.com/nome_usuario/nome_diretorio.git
 #Suba o código
 git push -u origin master
 #Informe suas credenciais para prosseguir
+
+git add .
+
+git commit -m "observação"
+
+git push
  ```
  
  
