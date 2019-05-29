@@ -1,7 +1,13 @@
 # Ambiente de desenvolvimento
 
+Esse material explica como criar um projeto de aplicação web com [ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-2.1) usando o padrão [MVC](https://docs.microsoft.com/pt-br/aspnet/core/mvc/overview?view=aspnetcore-2.1). Você também pode encontrar outro material em português de boa qualidade neste [link](https://raphaelcardoso.com.br/criando-aplicacao-web-com-aspnet-core-mvc-parte-1/)
+
+## Requisitos
+
  - Visual Studio 2017
  - ASP.NET Core 2.1
+ - Entity Framework Core
+ - SQL Server
  
 
  ## Baixando ASP.NET Core 2.1
