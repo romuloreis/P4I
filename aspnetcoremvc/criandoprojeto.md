@@ -1,6 +1,6 @@
 # Super Application - Primeiro Projeto
 
-## Criando projeto MVC
+## Criando projeto MVC e repositório Git
 
 Para criar um novo projeto acesso o menu **File->New->Project** (Fig. 1).
 
