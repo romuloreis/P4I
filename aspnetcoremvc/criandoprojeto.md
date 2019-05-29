@@ -1,4 +1,6 @@
-# Criando projeto
+# Super Application - Primeiro Projeto
+
+## Criando projeto MVC
 
 Para criar um novo projeto acesso o menu **File->New->Project** (Fig. 1).
 
@@ -12,17 +14,30 @@ Na lateral esquerda da janela _New Project_ abra as guias _installed - Visual C#
 
 Figura 2. Criando novo projeto
 
-Nesta tela selecione a versão 2.1 do ASP.NET Core e o template para projeto _Web Application (Model - View - Controller)_ (Fig. 3)
+Nesta tela selecione a versão 2.1 do ASP.NET Core e o template para projeto _Web Application (Model - View - Controller)_ (Fig. 3). Essa opção vai criar a estrutura do projeto, incluindo algumas páginas de exemplo.
 
 ![Second_img](/aspnetcoremvc/assets/img/ambiente03.png)
 
 Figura 3. Criando novo projeto
 
 
-# Entendo a estrutura de diretórios/pastas do projeto
+## Entendo a estrutura de diretórios/pastas do projeto
 
 Ao criar um novo projeto ASP.NET Core MVC, será criada um estrutura de diretórios e arquivos, como pode ser visiualizado em _Solution Explorer_ na lateral direita do Visual Studio (Fig. 4).
 
 ![Second_img](/aspnetcoremvc/assets/img/ambiente06.png)
 
 Figura 4. Estrutura do projeto no Solution Explorer.
+
+
+**SuperApplication**
+ - Connected Services
+ - Dependencies
+ - Properties
+ - wwwroot
+ - Controllers
+ - Models
+ - Views
+ - appsettings.json
+ - Program.cs
+ - Startup.cs
