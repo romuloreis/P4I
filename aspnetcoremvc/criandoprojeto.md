@@ -31,13 +31,43 @@ Figura 4. Estrutura do projeto no Solution Explorer.
 
 
 **SuperApplication**
- - Connected Services
- - Dependencies
- - Properties
- - wwwroot
- - Controllers
- - Models
- - Views
- - appsettings.json
- - Program.cs
- - Startup.cs
+ <details>
+  <summary>Connected Services</summary>
+bla
+ </details>
+  <details>
+  <summary>Dependencies</summary>
+bla
+ </details>  
+ <details>
+  <summary>Properties</summary>
+bla
+ </details>
+ <details>
+  <summary>wwwroot</summary>
+bla
+ </details>
+ <details>
+  <summary>Controllers</summary>
+bla
+ </details>
+ <details>
+  <summary>Models</summary>
+bla
+ </details>
+ <details>
+  <summary>Views</summary>
+bla
+ </details>
+ <details>
+  <summary>appsettings.json</summary>
+bla
+ </details>
+ <details>
+  <summary>Program.cs</summary>
+bla
+ </details>
+ <details>
+  <summary>Startup.cs</summary>
+bla
+ </details>
