@@ -61,19 +61,34 @@ Segue abaixo a descrição de cada um dos elementos dessa estrutura (Clique para
  </details>
  <details>
   <summary>Views</summary>
- Pasta destinada as telas da minha aplicação. Essa pasta é organizada em subpastas conforme minhas entidades. Em outras palavras, se ru tiver uma entidade chamada Produto, eu terei que criar uma pasta chamada Produto dentro da pasta View, para colocar as telas (os arquivos com extensão _cshtml_) relativos à essa entidade. Os arquivos _.cshtml_  permitem bloco de códigos C# no meio do código HTML.
+ Pasta destinada as telas da minha aplicação. Essa pasta é organizada em subpastas conforme minhas entidades. Em outras palavras, se ru tiver uma entidade chamada Produto, eu terei que criar uma pasta chamada Produto dentro da pasta View, para colocar as telas (os arquivos com extensão _cshtml_) relativos à essa entidade. Os arquivos _.cshtml_  permitem bloco de códigos C# no meio das marcações do HTML.
+ 
+Na subpasta _Shared (Compartilhada)_  há páginas que vão ser utilizadas por mais de um Controlador (Controller). O arquivo _\_Layout.cshtml_ é o responsável por definir o layout básico de todas as páginas, definindo também a importação do JQuery, css, bootstrap e demais dependências gerais. O arquivo _\_ViewStart.cshtml_ define que o layout da aplicação será a partir do arquivo _\_Layout.cshtml_, já o arquivo _\_ViewImports_ define as bibliotecas gerais que que minhas páginas podem usar.
  </details>
  <details>
   <summary>appsettings.json</summary>
-bla
+  Contém a configuração de recursos externos, como Logging, credenciais do Banco de dados, etc.
  </details>
  <details>
   <summary>Program.cs</summary>
- Aarquivo principal responsável por inicializar a aplicação por meio do método _public void main_.
+  Este é o aquivo principal, é o ponto de entrada da aplicação, sendo responsável por inicializar a aplicação por meio do método _public void main_, que por padrão invoca o método CreateWebHostBuilder que chama a classe _Startup_.
  </details>
  <details>
   <summary>Startup.cs</summary>
-bla
+Essa classe contém configurações do meu projeto. Note a dependência com a classe _Configuration_, que já é necessária no método construtor da classe Startup. Essa classe ainda tem dois métodos "principais", sendo o primeiro _ConfigureServices_, responsável por configurar os serviços da aplicação e o segundo _Configure_ responsável pelas configurações relacionadas ao comportamento das requisições HTTP ([pipeline HTTP](https://en.wikipedia.org/wiki/HTTP_pipelining), encontre mais informações [aqui](https://www-archive.mozilla.org/projects/netlib/http/pipelining-faq.html)). Ou seja, neste método podemos configurar midlewares para interseptar e tratar as requisições HTTP. 
+Ainda no método _Configure_, temos as definições das rotas. Neste caso, a rota básica padrão (Default) da aplicação vai ser o controlador Home e a ação Index (que é um método da classe _HomeController_). Então se eu acessar o servidor sem passar um endereço, ele vai por padrão acessar a ação Index do controlador Home.
+ 
+ ```C#
+ //Arquivo Startup.cs
+     app.UseMvc(routes =>
+     {
+         routes.MapRoute(
+             name: "default",
+             template: "{controller=Home}/{action=Index}/{id?}");
+     });
+ 
+ ```
+ 
  </details>
  
 ## Executando o projeto
@@ -109,3 +124,5 @@ Já para compilar e subir a aplicação há duas opções:
  #Informe suas credenciais
  ```
  
+ 
+ > Adicionar diagrama de fluxo do processo algoritmo do framework (ordem de execução dos métodos).
