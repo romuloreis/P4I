@@ -114,14 +114,22 @@ Já para compilar e subir a aplicação há duas opções:
  
  Se a opção de criar um repositório de forma automática foi selecionada na etapa de criação do projeto, basta executar o seguintes comandos git no diretório do projeto.
  
-  > Dica: No Windows você pode acessar a pasta do projeto e 
+  > Dica: No Windows você pode acessar a pasta do projeto e com o botão auxiliar do mouse (nome bonito para botão direito do mouse) selecione a opção _Git Bash Here_ para abrir o prompt de comando já no diretório do projeto.
  
  ```bash
- #Associar o projeto local ao diretório do github
- git remote add origin https://github.com/nome_usuario/nome_diretorio.git
- #Suba o código
- git push -u origin master
- #Informe suas credenciais
+#Comando para verificar se há algo para commitar
+git status
+
+#Log do github, vai mostrar a lista de commits
+git log 
+
+#criar repositório no github
+#Não marcar opção *commit inicial*, pois já existe (caso você tenha marcado a opção na hora da criação do projeto).
+#Agora basta copiar o comando _git remote add origin_ para associar esse repositório com o diretório do meu computador.
+git remote add origin https://github.com/nome_usuario/nome_diretorio.git
+#Suba o código
+git push -u origin master
+#Informe suas credenciais para prosseguir
  ```
  
  
