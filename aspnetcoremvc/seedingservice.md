@@ -54,7 +54,9 @@ Public void Seed(){
   SalesRecord r29 = new SalesRecord(29, new DateTime(2018, 10, 23), 12000.0, SaleStatus.Billed, s5);
   SalesRecord r30 = new SalesRecord(30, new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
 
- _context.Department.AddRange(d1, d2, d3, d4);
+  /*Uma vez que nossos objetos estão criados, basta adicionar eles no banco de dados, usando o EntityFramework*/
+  //AddRange permite adicionar um conjunto de objetos. Em outras palavras, vários objetos.
+  _context.Department.AddRange(d1, d2, d3, d4);
 
   _context.Seller.AddRange(s1, s2, s3, s4, s5, s6);
 
@@ -63,8 +65,8 @@ Public void Seed(){
                 r11, r12, r13, r14, r15, r16, r17, r18, r19, r20,
                 r21, r22, r23, r24, r25, r26, r27, r28, r29, r30
             );
-
- _context.SaveChanges();
+  //Método que efetiva o registro/gravação no banco de dados
+  _context.SaveChanges();
 
 }
 ```
