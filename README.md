@@ -12,4 +12,5 @@
  
  
  ## Seeding Service
-  - [Código](aspnetcoremvc/seedingservice.md)
+  - [Código SeedingService](aspnetcoremvc/seedingservice.md)
+  - [Código Index de Sellers](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/notas-aula.md)
