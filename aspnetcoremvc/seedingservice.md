@@ -19,7 +19,8 @@ Public void Seed(){
   Seller s3 = new Seller(3, "Laa-Laa", "laalaa@uaumart.com", new DateTime(1988, 10, 31), 23350.0, d1);
   Seller s4 = new Seller(4, "Xuxa Meneguel", "rainha@uaumart.com", new DateTime(1999, 1, 20), 3500.0, d4);
   Seller s5 = new Seller(5, "Po the Red", "po@uaumart.com", new DateTime(2000, 3, 19), 4500.0, d3);
-  Seller s6 = new Seller(6, "Power Ranger Amarelo", "poweryellow@uaumart.com", new DateTime(1977, 5, 24), 15900.0, d2);
+  Seller s6 = new Seller(6, "Power Ranger Amarelo", "poweryellow@uaumart.com", 
+  new DateTime(1977, 5, 24), 15900.0, d2);
 
  //Cria registros de vendas
   SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
