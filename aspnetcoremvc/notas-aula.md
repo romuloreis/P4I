@@ -109,6 +109,8 @@ List<Conta>	contas	=	//	inicializa	a	lista
 var	filtradas	=	contas.Filtra(condição); 
 ```
 
+### Slides (52)
+
 Mas	como	passar	a	condição	para	esse	filtro?	Teríamos	que	enviar	um	bloco	de	código	que	aceita	ou rejeita	os	valores	da	coleção.	Para	passar	um	bloco	de	código	que	pode	ser	utilizado	por	um	método,	o C#	introduziu	as	funções	anônimas	ou	lambdas.	As	funções	anônimas	funcionam	como	métodos estáticos	da	linguagem	com	uma	declaração	simplificada.	Para	declarar	uma	função	anônima	que	recebe um	argumento	do	tipo		Conta		utilizamos	o	seguinte	código:
 
 ```cs
@@ -147,7 +149,12 @@ Mas	como	passar	a	condição	para	esse	filtro?	Teríamos	que	enviar	um	bloco	de	
 Conta	filtradas	=	contas.Where(c	=>	c.Saldo	>	2000	);
 ```
 
-## 	OUTROS	MÉTODOS	DO	LINQ
+**outro exemplo:**
+```cs
+Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0	);
+```
+
+## 	OUTROS	MÉTODOS	DO	LINQ 
 
 Somar o saldo de todas as contas 
 ```cs
@@ -188,6 +195,12 @@ double	media	=	saldos.Average();
 
 ## UTILIZANDO	O	LINQ	COM	OUTROS	TIPOS
 Podemos	utilizar	o	LINQ	com	qualquer	objeto	que	implemente	a	interface		IEnumerable
+
+**outro exemplo:**
+```cs
+//Aplica uma função a cada resultado da função primária
+Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0	).Select(z => z*10);
+```
 
 ## OUTROS FILTROS (OrderBy, ThenBy)																				
 .ThenBy()
