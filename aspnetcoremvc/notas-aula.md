@@ -70,8 +70,10 @@
 
 # LINQ	E	LAMBDA
 
+**Usar uma classe mais complexa tipo Product e Category**
+
 ```cs
-//	inicializa	a	lista
+    //	inicializa	a	lista
             List<Conta> contas = new List<Conta>();
             //	inserimos	algumas	contas lista.Add(...);	
             Conta c1 = new Conta(1, "Ana", 2000);
@@ -101,7 +103,7 @@
 
 ```
 
-## FILTROS	UTILIZANDO	O	LINQ
+## FILTROS	UTILIZANDO	O	LINQ (com Lambda)
 
 Para	filtrar	uma	lista,	seria	muito	mais	interessante	que	a	própria	coleção	tivesse	algum	método	que recebesse	a	condição	que	queremos	aplicar	nesse	filtro	e	já	implementasse	a	lógica	do		foreach	,	algo como:
 ```cs
@@ -146,7 +148,7 @@ Mas	como	passar	a	condição	para	esse	filtro?	Teríamos	que	enviar	um	bloco	de	
 **Chaves e Return** desnecessário para uma linha de código
 
 ```cs
-Conta	filtradas	=	contas.Where(c	=>	c.Saldo	>	2000	);
+Conta	filtradas	=	contas.Where(c	=>	c.Saldo	>	2000);
 ```
 
 **outro exemplo:**
@@ -212,7 +214,7 @@ var	resultado	=	contas
 .ThenBy(c	=>	c.Numero);
 ```
 
-## MELHORANDO	AS	BUSCAS	UTILIZANDO	A	SINTAXE	DE	QUERIES
+## MELHORANDO	AS	BUSCAS	UTILIZANDO	A	SINTAXE	DE	QUERIES 
 
 ```cs
 var	filtradas	=	from	c	in	contas
@@ -230,9 +232,58 @@ select	new	{	c.Numero,	c.Titular	};
 
 ## 	ORDENANDO	COLEÇÕES	COM	LINQ
 
+```cs
 List<Conta>	contas	=	//	inicializa	a	lista	de	contas 
     var	resultado	=	from	c	in	contas
     where	c.Saldo	>	10000																
     orderby	c.Titular.Nome	descending,	c.Numero	descending																
     select	c;
+```
 
+## Convertendo
+
+```cs
+IEnumerable<Conta>	contas	=	//	inicializa	a	lista	de	contas 
+    List<Conta>	resultado	=	from	c	in	contas
+    where	c.Saldo	>	10000																
+    orderby	c.Titular.Nome	descending,	c.Numero	descending																
+    select	c;
+```
+
+## Seleções mais complexas
+
+```cs
+//Tendo as classes Product e Category
+var result1 = products.Where(x => x.Category.MyType == 1 && x.Price > 900.00 );
+
+var r1 = from p in products
+where x.Category.MyType == 1 && x.Price > 900.00
+select x;
+
+//Uma propriedade
+var result2 = products.Where(x => x.Category.MyType == 1 && x.Price > 900.00 ).Select(x => x.Name);
+
+var r2 = from p in products
+where x.Category.MyType == 1 && x.Price > 900.00
+select x.Name;
+
+//Objeto Anon (conjunto de propriedades em um objeto "anonimo")
+var result3 = products.Where(x => x.Name[0] == 'C').Select(x => new {x.Name, x.Id});
+
+var r3 = from p in products
+where x.Name[0] == 'C'
+select new{
+    x.Name, 
+    x.Id
+};
+
+//filtrando lista de lista filtrada
+var result4 = result3.Skip(1).Take(4);
+
+var r4 = (from p in result3
+    select p).Skip(1).Take(4);
+
+//Limitando número
+var result4 = result3.FirstOrDefault();
+
+```
