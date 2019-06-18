@@ -1,4 +1,4 @@
-#Adicionando Contollers e Views
+# Adicionando Contoller de Seller e sua Index View
 
 Vamos começar a fazer o controlador de vendedores, mas antes…
 
