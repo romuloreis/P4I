@@ -196,25 +196,30 @@ Na classe _Department_ criar o método _AddSeller_
 
 
 
-###############################################
-Adicionar DB Set’s no DB Context
-Para esses modelos serem reconhecidos pelo banco de dados, vou ter que adicionar às classes como DBSets lá no meu DBContext
+## Adicionando DB Set’s no DB Context
 
-Na pasta Data, no NomeProjetoDBContext
-Como o namespace eh Applicationx.Models já está incluso no using, pode apagar no método todo o caminho e deixar apenas <Departament>
-Print 
+Para esses modelos serem reconhecidos pelo banco de dados, vamos ter que adicionar às classes como DBSets no DBContext
 
-Adicionar os outros DBSets
-Prop tab tab
-DbSet<Seller> Seller
-DbSet<SalesRecord> SalesRecord
+Na pasta **Data** em **NomeProjetoDBContext**
 
+Como o namespace é _ApplicationBla.Models_, já está incluso no using, então pode apagar no método todo o caminho e deixar apenas <Departament>.
 
-##########################################################
-Nova migração
-Package Manager Console
-Add-Migration OtherEntities
-Deve criar uma outra migração na pasta migration
-Para atualizar o Banco execute….
-Update-Database
-Abra o banco e veja o resultado
+```cs
+        public DbSet<SuperApplication.Models.Department> Department { get; set; }
+        /*Adicionar os outros DBSets*/
+        public DbSet<SuperApplication.Models.Seller> Seller { get; set; }
+        public DbSet<SuperApplication.Models.SalesRecord> SalesRecord { get; set; }
+```
+
+## Nova Migração
+No Package Manager Console executar:
+
+ > Add-Migration AddingOtherEntities
+ 
+Deve ser criando de forma automática uma outra migração na pasta **migration**
+
+Para atualizar o Banco execute:
+
+ > Update-Database
+ 
+Abra o banco e veja o resultado.
