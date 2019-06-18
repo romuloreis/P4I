@@ -84,6 +84,7 @@ Vamos utilizar um template vazio para essa View.
 No arquivo da View _Delete_ em **View/Sellers/**, vamos definir o tipo do model
 que ela vai receber.
 
+```html
 @SuperProject.Models.Seller
 
 @{
@@ -124,12 +125,31 @@ que ela vai receber.
   </dl>
 </div>
 
-<!--Ao clicar no botão, vai chamar a action Delete, passando todos
-os dados do vendedor que está sendo deletado, incluindo seu id-->
+<!--Ao clicar no botão, vai chamar a action Delete-->
 <form asp-action="Delete">
+  <!--Vanmos passar o id do vendedor que deve ser deletado por meio
+do campo oculto abaixo->
+  <input type="hidden" asp-for="Id" />
   <input type="submit" value="Delete" class="btn btn-danger"/>
+  <a asp-action="Index">Back to List</a>
 </form>
+```
+
+Hora de testar!
+
+Note que ao clicar no botão para confirmar a exclusão, nada vai ocorrer,
+pois ainda não implementamos a action _Delete_ com método POST.
+
+Sendo assim, no controlador de vendedores, 
+vamos criar a action _Delete_ com método POST.
 
 
-s75
-v239models
+```cs
+[HttpPost]
+public IActionResult Delete(int id){
+  _sellerService.Remove(id);
+  return RedirectToAction(nameof(Index));
+}
+```
+
+Hora de testar novamente!
