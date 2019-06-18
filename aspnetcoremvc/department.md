@@ -1,4 +1,4 @@
-#Super Application - Criando Controlador e Páginas Razor
+# Super Application - Criando department
 
 ## Nota sobre rotas
 
@@ -75,14 +75,14 @@ namespace SuperApplication.Models.ViewModels
 }
 ``` 
  
-## Criando Model Departament
+## Criando Model Department
 
-Na pasta **Models** Adicione uma nova classe chamada _Departament_ e adicione as propriedades Id e Name.
+Na pasta **Models** Adicione uma nova classe chamada _Department_ e adicione as propriedades Id e Name.
  
  ```C# 
  namespace SuperApplication.Models
 {
-    public class Departament
+    public class Department
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -91,9 +91,7 @@ Na pasta **Models** Adicione uma nova classe chamada _Departament_ e adicione as
  ```
  
  ## Criando Controller empty
- Nome do controller Departament**s**Controller, no plural.
- 
- Adicione uma lista de departamentos no método Index() e popule ela.
+
  
  
  
