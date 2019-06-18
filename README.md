@@ -6,6 +6,8 @@
  - [Criando Projeto](aspnetcoremvc/criandoprojeto.md)
  - [Criando Department](aspnetcoremvc/department.md)
  - [Criando Demais Modelos](aspnetcoremvc/criandomodels.md) 
+ - [Criando Controlador de Vendedores](aspnetcoremvc/controladores-seller.md)
+ - [bla](#)
  
  ## Seeding Service
   - [Código SeedingService](aspnetcoremvc/seedingservice.md)
