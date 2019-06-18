@@ -196,7 +196,7 @@ Agora vamos implementar uma tabela para listar os dados (vendedores) recebidos d
         <tr class="success">
             <th>
                 <!-- recurso do framework(mostrar nome do atributo do objeto "Name" do objeto da lista)
-                apenas o nome do atributo, não o valor. Até pq @model é uma lista-->
+                apenas o nome do atributo, não o valor. Até pq AT model é uma lista-->
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
