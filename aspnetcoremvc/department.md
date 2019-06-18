@@ -90,7 +90,14 @@ Na pasta **Models** Adicione uma nova classe chamada _Department_ e adicione as 
 }
  ```
  
- ## Criando Controller empty
+ ## CRUD Scaffolding
+ 
+ - Botão direito do mouse na pasta controllers... (Controllers -> Add -> New Scaffolded Item)
+   - Selecionar opção: MVC controllers with views, using Entity Framework
+ - Model class: Department
+ - Clique no símbolo + para criar um Data context class (DbContext) (aceita sugestão de nome)
+ - Em Views, seleciona às três opções
+ - Nome do controlador: DepartamentsController
 
  
  
