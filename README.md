@@ -4,7 +4,7 @@
 ## Material 
  - [Ambeinte](aspnetcoremvc/ambiente.md)
  - [Criando Projeto](aspnetcoremvc/criandoprojeto.md)
- - [Controller](aspnetcoremvc/primeirocontroller.md)
+ - [Department](aspnetcoremvc/department.md)
  
  
  
