@@ -7,7 +7,9 @@
  - [Criando Department](aspnetcoremvc/department.md)
  - [Criando Demais Modelos](aspnetcoremvc/criandomodels.md) 
  - [Criando Controlador de Vendedores](aspnetcoremvc/controladores-seller.md)
- - [bla](#)
+ - [Formulário para add Vendedores](aspnetcoremvc/formulario-criacao-seller.md)
+ - [Deletando Vendedores](aspnetcoremvc/deletando-seller.md)
+ 
  
  ## Seeding Service
   - [Código SeedingService](aspnetcoremvc/seedingservice.md)
