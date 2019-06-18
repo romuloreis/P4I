@@ -98,7 +98,45 @@ Na pasta **Models** Adicione uma nova classe chamada _Department_ e adicione as 
  - Clique no símbolo + para criar um Data context class (DbContext) (aceita sugestão de nome)
  - Em Views, seleciona às três opções
  - Nome do controlador: DepartamentsController
+ 
+  **Conforme ilustrado nas imagens:**
+ 
+ ![First_img](/aspnetcoremvc/assets/img/scaf01.png)
+ 
+  ![First_img](/aspnetcoremvc/assets/img/scaf02.png)
+  
+  ![First_img](/aspnetcoremvc/assets/img/scaf03.png)
 
  
+ ## Migration
  
+Tools -> packte manager -> nuget console
+
+_Add-Migration Initial_
+
+ > Note que a palavra _initial_ pode ser um nome qualquer
+ 
+Vai criar uma pasta “migrations” com o primeiro script de migration com ano-mes-dia como nome de arquivo
+PARA manter a ordem cronológica das alterações -> esse arquivo herda de migration.
+
+Vamos executar a migration agora
+
+_Update-Database_
+
+output mostra o script usado para criar o banco
+
+Acessa /Departaments e teste.
+
+## Atualizando Bootstrap
+
+ - bootswtch.com/3
+ - www/lib/bootstrap/dist/css
+ - Salva como bootstrap-nometema.css
+ - Copia o arquivo e cola pelo visual studio
+ - shared/_Layout -> atualiza ref do bootstrap
+	- Environment development
+
+
+
+
  
