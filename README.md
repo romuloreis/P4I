@@ -4,12 +4,8 @@
 ## Material 
  - [Ambeinte](aspnetcoremvc/ambiente.md)
  - [Criando Projeto](aspnetcoremvc/criandoprojeto.md)
- - [Department](aspnetcoremvc/department.md)
- 
- 
- 
- 
- 
+ - [Criando Department](aspnetcoremvc/department.md)
+ - [Criando Demais Modelos](aspnetcoremvc/criandomodels.md) 
  
  ## Seeding Service
   - [Código SeedingService](aspnetcoremvc/seedingservice.md)
