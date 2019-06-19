@@ -1,3 +1,4 @@
+```cs
 class MyContext : DbContext
 {
     public DbSet<Blog> Blogs { get; set; }
@@ -30,3 +31,4 @@ public class Post
     public int BlogId { get; set; }
     public Blog Blog { get; set; }
 }
+```
