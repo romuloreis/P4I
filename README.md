@@ -21,11 +21,14 @@
    
    ## Material
    
-    - [Criando Modelos](https://docs.microsoft.com/pt-br/ef/core/modeling/)
-    - [Modelagem do banco de dados](https://docs.microsoft.com/pt-br/ef/core/modeling/relational/)
-    - [Data Annotations](https://docs.microsoft.com/pt-br/ef/ef6/modeling/code-first/data-annotations)
-    - [Helper Tag - validação](https://docs.microsoft.com/pt-br/aspnet/core/mvc/views/working-with-forms?view=aspnetcore-3.0#the-validation-summary-tag-helper)
-    - [Série de tutoriais](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/?view=aspnetcore-2.2)
-    - [Tutorial básico](https://docs.microsoft.com/pt-br/ef/core/get-started/aspnetcore/new-db?tabs=visual-studio)
-    - [Tutorial Básico do zero](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.2&tabs=visual-studio)
-    - [Tutorial: Criar um modelo de dados complexo - ASP.NET MVC com EF Core](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/complex-data-model?view=aspnetcore-2.2)
+   - [Criando Modelos](https://docs.microsoft.com/pt-br/ef/core/modeling/)
+   - [Modelagem do banco de dados](https://docs.microsoft.com/pt-br/ef/core/modeling/relational/)
+   - [Data Annotations](https://docs.microsoft.com/pt-br/ef/ef6/modeling/code-first/data-annotations)
+   - [Helper Tag - validação](https://docs.microsoft.com/pt-br/aspnet/core/mvc/views/working-with-forms?view=aspnetcore-3.0#the-validation-summary-tag-helper)
+   - [Série de tutoriais](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/?view=aspnetcore-2.2)
+   - [Tutorial básico](https://docs.microsoft.com/pt-br/ef/core/get-started/aspnetcore/new-db?tabs=visual-studio)
+   - [Tutorial Básico do zero](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.2&tabs=visual-studio)
+   - [Tutorial: Criar um modelo de dados complexo - ASP.NET MVC com EF Core](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/complex-data-model?view=aspnetcore-2.2)
+   - [Many-to-many artigo 1](https://www.codeproject.com/Articles/702890/MVC-Entity-Framework-and-Many-to-Many-Relation)
+   - [Many-to-many artigo 2](https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration)
+  
