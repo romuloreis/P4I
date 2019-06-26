@@ -12,16 +12,25 @@ valida se duas propriedades em um modelo são correspondentes.
 
 valida se a propriedade tem um formato de email.
 
-**Phone** valida se a propriedade tem um formato de número de telefone.
+**Phone** 
 
-**RegularExpression** valida se o valor da propriedade corresponde à expressão regular especificada.
+valida se a propriedade tem um formato de número de telefone.
 
-**Url** valida se a propriedade tem um formato de URL.
+**RegularExpression** 
 
-**Remote** valida a entrada no cliente chamando um método de ação no servidor. 
+valida se o valor da propriedade corresponde à expressão regular especificada.
+
+**Url** 
+
+valida se a propriedade tem um formato de URL.
+
+**Remote** 
+
+valida a entrada no cliente chamando um método de ação no servidor. 
 
 
 **Required**
+
 Valida se o campo não é nulo. Consulte atributo.
 This attribute specifies that the value is mandatory and cannot be skipped.
 
