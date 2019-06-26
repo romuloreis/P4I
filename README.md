@@ -33,4 +33,14 @@
    - [Many-to-many artigo 1](https://www.codeproject.com/Articles/702890/MVC-Entity-Framework-and-Many-to-Many-Relation)
    - [Many-to-many artigo 2](https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration)
    - [Paginação, caixa de pesquisa e filtros](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/sort-filter-page?view=aspnetcore-2.2)
+   
+   ## Material Extra
+   
+  - [Explicação sobre validação em pt-br](https://docs.microsoft.com/pt-br/aspnet/core/mvc/models/validation?view=aspnetcore-2.1)
+  - [Artigo sobre validação de números de telefone](https://sensibledev.com/phone-number-validation-in-asp-net/)
+  - [compare validator mvc](https://sensibledev.com/compare-validator-in-mvc/)
+  - [mvc - upload de multiplos arquivos](https://sensibledev.com/mvc-multiple-file-upload/)
+  
+  - [Conceitos importantes](https://sensibledev.com/entity-framework-interview-questions/)
+  - [BootStrap 4](https://sensibledev.com/mvc-bootstrap-form-example/)
   
