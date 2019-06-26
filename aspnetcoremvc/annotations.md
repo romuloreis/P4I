@@ -1,4 +1,4 @@
-Atributos internos
+# Atributos internos
 Aqui estão alguns dos atributos de validação internos:
 [CreditCard]: valida se a propriedade tem um formato de cartão de crédito.
 [Compare]: valida se duas propriedades em um modelo são correspondentes.
@@ -81,7 +81,7 @@ Syntax
 
 [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Email is not valid.")]
 
-
+  - [Explicação em pt-br](https://docs.microsoft.com/pt-br/aspnet/core/mvc/models/validation?view=aspnetcore-2.1)
   - [Article about phone  number validation](https://sensibledev.com/phone-number-validation-in-asp-net/)
   - [compare-validator-in-mvc](https://sensibledev.com/compare-validator-in-mvc/)
   - [mvc multiple file upload](https://sensibledev.com/mvc-multiple-file-upload/)
