@@ -1,12 +1,24 @@
 # Atributos internos
 Aqui estão alguns dos atributos de validação internos:
-[CreditCard]: valida se a propriedade tem um formato de cartão de crédito.
-[Compare]: valida se duas propriedades em um modelo são correspondentes.
-[EmailAddress]: valida se a propriedade tem um formato de email.
-[Phone]: valida se a propriedade tem um formato de número de telefone.
-[RegularExpression]: valida se o valor da propriedade corresponde à expressão regular especificada.
-[Url]: valida se a propriedade tem um formato de URL.
-[Remote]: valida a entrada no cliente chamando um método de ação no servidor. Consulte atributo [Remote] para obter detalhes sobre o comportamento desse atributo.
+**CreditCard**
+
+valida se a propriedade tem um formato de cartão de crédito.
+
+**Compare** 
+
+valida se duas propriedades em um modelo são correspondentes.
+
+**EmailAddress** 
+
+valida se a propriedade tem um formato de email.
+
+**Phone** valida se a propriedade tem um formato de número de telefone.
+
+**RegularExpression** valida se o valor da propriedade corresponde à expressão regular especificada.
+
+**Url** valida se a propriedade tem um formato de URL.
+
+**Remote** valida a entrada no cliente chamando um método de ação no servidor. 
 
 
 **Required**
