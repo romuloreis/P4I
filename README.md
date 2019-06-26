@@ -8,7 +8,8 @@
  - [Criando Demais Modelos](aspnetcoremvc/criandomodels.md) 
  - [Criando Controlador de Vendedores](aspnetcoremvc/controladores-seller.md)
  - [Formulário para add Vendedores](aspnetcoremvc/formulario-criacao-seller.md)
- - [Deletando Vendedores](aspnetcoremvc/deletando-seller.md)
+ - [Deletando Vendedores](aspnetcoremvc/deletando-seller.md)]
+ - [Tipos de notações (resumo)](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/annotations.md)
  
  
  ## Seeding Service
