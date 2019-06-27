@@ -16,8 +16,10 @@
   - [Código SeedingService](aspnetcoremvc/seedingservice.md)
   - [Código Index de Sellers](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/notas-aula.md)
   
-  ## Projeto Atualizado
-   - [download](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/ualmart.zip)
+  ## Projetos feitos em aula atualizados
+   - [Projeto ualmart - download](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/ualmart.zip)
+   - [Projeto Blog Relacional](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/SuperBlogRelacional.zip)
+   - [Projeto Validação](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/ValidationApplication.zip)
    
    
    ## Material
