@@ -242,12 +242,16 @@ Mas	como	passar	a	condição	para	esse	filtro?	Teríamos	que	enviar	um	bloco	de	
 **Chaves e Return** desnecessário para uma linha de código
 
 ```cs
+
 Conta	filtradas	=	contas.Where(c	=>	c.Saldo	>	2000);
+
 ```
 
 **outro exemplo:**
 ```cs
-Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0	);
+
+Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0);
+
 ```
 
 ## 	OUTROS	MÉTODOS	DO	LINQ 
