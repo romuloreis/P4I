@@ -35,6 +35,7 @@
    - [Tutorial: Criar um modelo de dados complexo - ASP.NET MVC com EF Core](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/complex-data-model?view=aspnetcore-2.2)
    - [Many-to-many artigo 1](https://www.codeproject.com/Articles/702890/MVC-Entity-Framework-and-Many-to-Many-Relation)
    - [Many-to-many artigo 2](https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration)
+   **New: ** [Consultas](https://docs.microsoft.com/pt-br/ef/core/querying/)
    - [Paginação, caixa de pesquisa e filtros](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/sort-filter-page?view=aspnetcore-2.2)
    
    ## Material Extra
@@ -46,4 +47,5 @@
   
   - [Conceitos importantes](https://sensibledev.com/entity-framework-interview-questions/)
   - [BootStrap 4](https://sensibledev.com/mvc-bootstrap-form-example/)
+  
   
