@@ -68,6 +68,100 @@
 
 ```
 
+
+# Deleting examples syntaxe
+
+https://docs.microsoft.com/pt-br/ef/core/saving/cascade-delete
+
+```cs
+class MyContext : DbContext
+{
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<Post> Posts { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Post>()
+            .HasOne(p => p.Blog)
+            .WithMany(b => b.Posts)
+            .OnDelete(DeleteBehavior.Cascade);
+    }
+}
+
+public class Blog
+{
+    public int BlogId { get; set; }
+    public string Url { get; set; }
+
+    public List<Post> Posts { get; set; }
+}
+
+public class Post
+{
+    public int PostId { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+
+    public int? BlogId { get; set; }
+    public Blog Blog { get; set; }
+}
+```
+
+# Many-to-Many example syntaxe
+
+```cs
+class MyContext : DbContext
+{
+    public DbSet<Post> Posts { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<PostTag>()
+            .HasKey(pt => new { pt.PostId, pt.TagId });
+
+        modelBuilder.Entity<PostTag>()
+            .HasOne(pt => pt.Post)
+            .WithMany(p => p.PostTags)
+            .HasForeignKey(pt => pt.PostId);
+
+        modelBuilder.Entity<PostTag>()
+            .HasOne(pt => pt.Tag)
+            .WithMany(t => t.PostTags)
+            .HasForeignKey(pt => pt.TagId);
+    }
+}
+
+public class Post
+{
+    public int PostId { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+
+    public List<PostTag> PostTags { get; set; }
+}
+
+public class Tag
+{
+    public string TagId { get; set; }
+
+    public List<PostTag> PostTags { get; set; }
+}
+
+public class PostTag
+{
+    public int PostId { get; set; }
+    public Post Post { get; set; }
+
+    public string TagId { get; set; }
+    public Tag Tag { get; set; }
+}
+```
+
+# Consultas
+
+https://docs.microsoft.com/pt-br/ef/core/querying/
+
 # LINQ	E	LAMBDA
 
 **Usar uma classe mais complexa tipo Product e Category**
