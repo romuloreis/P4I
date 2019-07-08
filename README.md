@@ -3,7 +3,7 @@
 # Tópicos semi-diários
 ## Deletando registros: Comportamentos de exclusão
 Ao deletar um registro de uma tabela, os registros de outras tabelas que tenham relação com esse registro são impactados.
-Precisamos garantir a consistência dos dados no banco relacional, sendo assim, devemos definir como tratar o impacto da remoção de um registro do banco. O comportamento da exclusão normalmente deve ser baseado nas [exigências do relacionamento](https://docs.microsoft.com/pt-br/ef/core/modeling/relationships#required-and-optional-relationships), definidas apartir das regras de negócio.
+Precisamos garantir a consistência dos dados no banco relacional, sendo assim, devemos definir como tratar o impacto da remoção de um registro do banco no DBContext. O comportamento da exclusão normalmente deve ser baseado nas [exigências do relacionamento](https://docs.microsoft.com/pt-br/ef/core/modeling/relationships#required-and-optional-relationships), definidas apartir das regras de negócio.
 
 Por exemplo,
 Em um cenário onde haja uma tabela **Post** e uma tabela **Comentários**, qual o comportamento mais adequado ao excluir um registro da Tabela **Post** que tenha vários comentários (Tabela Comentários tem uma chave estrangeira da table Post)?
@@ -11,6 +11,85 @@ Em um cenário onde haja uma tabela **Post** e uma tabela **Comentários**, qual
  - Deletar o registro de Post e todos os registros relacionados da tabela  **Comentários**?
  - Deletar o registro de Post e definir o valor **NULL** para a chave estrangeira desse registro em **Comentários**?
  - Não permitir a exlusão do registro da tabela **Post**?
+
+<details>
+
+<summary> Clique aqui para ver um código de exemplo! </summary> 
+
+Você também pode fazer download do código [aqui](#)
+
+```cs
+    public class Author
+    {
+        public int AuthorId { get; set; }
+        public string Name { get; set; }
+
+        public List<Post> Posts { get; set; } = new List<Post>();
+    }
+```
+
+```cs
+  public class Comment
+    {
+        public int CommentId { get; set; }
+        public string Content { get; set; }
+
+        /*a exclamação após a palavra int indica que esse campo é opcional,
+         sendo assim, podemos apagar o post em que esse comentário foi feito grandes impactos. 
+         Nesse caso, os comentários ficariam orfãos, não tendo relação com nenhuma postagem.*/
+        public int? PostId { get; set; }
+        public Post Post { get; set; }
+    }
+```
+
+```cs
+ public class Post
+    {
+        public int PostId { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+
+        /*Relação entre a postagem e seu autor.
+        O campo AuthorId torna-se obrigatório por padrão, 
+        afinal o framework entende que ele é uma chave estrangeira,
+         sendo assim, até podemos apagar o autor de uma postagem, porém isso terá um impacto nas 
+         postagens feitas pelo autor. 
+         Nesse caso, poderiamos deletar as postagens do autor ou definir o campo AuthorId como NULL,
+         já que o mesmo é um campo obrigatório*/
+        public int AuthorId { get; set; }
+        public Author Author { get; set; }
+
+        public List<Comment> Comments { get; set; } = new List<Comment>();
+    }
+```
+
+Aproveite o exemplo para alterar o comportamento de delete e testar.
+
+```cs
+/*Arquivo DBContext*/
+ protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            /*Uma postagem tem um autor, o qual tem várias postagens*/
+            modelBuilder.Entity<Post>()
+                .HasOne(p => p.Author)
+                .WithMany(b => b.Posts)
+                .OnDelete(DeleteBehavior.Cascade); /*Comportamento ao deletar uma postagem*/
+
+            /*Uma postagem vários comentários, os quais são de/pertencem à apenas uma postagem*/
+            modelBuilder.Entity<Post>()
+                .HasMany(c => c.Comments)
+                .WithOne(p => p.Post)
+                .OnDelete(DeleteBehavior.ClientSetNull);/*Comportamento ao deletar uma postagem*/
+
+            /*Uma autor tem vários posts, os quais são de/pertencem à apenas um autor*/
+            modelBuilder.Entity<Author>()
+                .HasMany(p => p.Posts)
+                .WithOne(a => a.Author)
+                .OnDelete(DeleteBehavior.Cascade);/*Comportamento ao deletar autor*/
+        }
+
+```
+</details>
 
 Descubra como fazer isso por meio desse **[ARTIGO](https://docs.microsoft.com/pt-br/ef/core/saving/cascade-delete)**
 
