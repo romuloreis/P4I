@@ -1,5 +1,18 @@
 # Projetos desenvolvidos na cadeira de Programação para Internet III
 
+# Tópicos semi-diários
+## Deletando registros: Comportamentos de exclusão
+Ao deletar um registro de uma tabela, os registros de outras tabelas que tenham relação com esse registro são impactados.
+Precisamos garantir a consistência dos dados no banco relacional, sendo assim, devemos definir como tratar o impacto da remoção de um registro do banco. O comportamento da exclusão normalmente deve ser baseado nas [exigências do relacionamento](https://docs.microsoft.com/pt-br/ef/core/modeling/relationships#required-and-optional-relationships), definidas apartir das regras de negócio.
+
+Por exemplo,
+Em um cenário onde haja uma tabela **Post** e uma tabela **Comentários**, qual o comportamento mais adequado ao excluir um registro da Tabela **Post** que tenha vários comentários (Tabela Comentários tem uma chave estrangeira da table Post)?
+
+ - Deletar o registro de Post e todos os registros relacionados da tabela  **Comentários**?
+ - Deletar o registro de Post e definir o valor **NULL** para a chave estrangeira desse registro em **Comentários**?
+ - Não permitir a exlusão do registro da tabela **Post**?
+
+Descubra como fazer isso por meio desse **[ARTIGO](https://docs.microsoft.com/pt-br/ef/core/saving/cascade-delete)**
 
 ## Material 
  - [Ambeinte](aspnetcoremvc/ambiente.md)
