@@ -1,6 +1,125 @@
 # Projetos desenvolvidos na cadeira de Programação para Internet III
 
 # Tópicos semi-diários
+## Relações (Apenas Model)
+
+Para saber mais sobre relações acesse esse [ARTIGO](https://docs.microsoft.com/pt-br/ef/core/modeling/relationships)
+
+ > Lembre-se de definir o comportamento ao ser deletado um registro que tenha relação com outros registros!
+
+<details>
+
+<summary>Exemplo de código de relação um para um (1-1)</summary> 
+```cs
+public class Blog
+{
+    public int BlogId { get; set; }
+    public string Url { get; set; }
+    
+    public Post Post { get; set; }
+}
+
+public class Post
+{
+    public int PostId { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+
+    public Blog Blog { get; set; }
+}
+```
+</details>
+
+<details>
+<summary>Exemplo de código de relação um para muitos (1-n)</summary> 
+```cs
+ class MyContext : DbContext
+{
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<BlogImage> BlogImages { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Blog>()
+            .HasOne(p => p.BlogImage)
+            .WithOne(i => i.Blog)
+            .HasForeignKey<BlogImage>(b => b.BlogForeignKey);
+    }
+}
+
+public class Blog
+{
+    public int BlogId { get; set; }
+    public string Url { get; set; }
+
+    public BlogImage BlogImage { get; set; }
+}
+
+public class BlogImage
+{
+    public int BlogImageId { get; set; }
+    public byte[] Image { get; set; }
+    public string Caption { get; set; }
+
+    public int BlogForeignKey { get; set; }
+    public Blog Blog { get; set; }
+}
+```
+</details>
+
+<details>
+<summary>Exemplo de código de relação muitos para muitos (n-n)</summary> 
+```cs
+ class MyContext : DbContext
+{
+    public DbSet<Post> Posts { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<PostTag>()
+            .HasKey(pt => new { pt.PostId, pt.TagId });
+
+        modelBuilder.Entity<PostTag>()
+            .HasOne(pt => pt.Post)
+            .WithMany(p => p.PostTags)
+            .HasForeignKey(pt => pt.PostId);
+
+        modelBuilder.Entity<PostTag>()
+            .HasOne(pt => pt.Tag)
+            .WithMany(t => t.PostTags)
+            .HasForeignKey(pt => pt.TagId);
+    }
+}
+
+public class Post
+{
+    public int PostId { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+
+    public List<PostTag> PostTags { get; set; }
+}
+
+public class Tag
+{
+    public string TagId { get; set; }
+
+    public List<PostTag> PostTags { get; set; }
+}
+
+public class PostTag
+{
+    public int PostId { get; set; }
+    public Post Post { get; set; }
+
+    public string TagId { get; set; }
+    public Tag Tag { get; set; }
+}
+```
+</details>
+
+
 ## Deletando registros: Comportamentos de exclusão
 Ao deletar um registro de uma tabela, os registros de outras tabelas que tenham relação com esse registro são impactados.
 Precisamos garantir a consistência dos dados no banco relacional, sendo assim, devemos definir como tratar o impacto da remoção de um registro do banco no DBContext. O comportamento da exclusão normalmente deve ser baseado nas [exigências do relacionamento](https://docs.microsoft.com/pt-br/ef/core/modeling/relationships#required-and-optional-relationships), definidas apartir das regras de negócio.
