@@ -10,7 +10,9 @@ Para saber mais sobre relações acesse esse [ARTIGO](https://docs.microsoft.com
 <details>
 
 <summary>Exemplo de código de relação um para um (1-1)</summary> 
+
 ```cs
+
 public class Blog
 {
     public int BlogId { get; set; }
@@ -27,12 +29,16 @@ public class Post
 
     public Blog Blog { get; set; }
 }
+
 ```
+
 </details>
 
 <details>
 <summary>Exemplo de código de relação um para muitos (1-n)</summary> 
+ 
 ```cs
+
  class MyContext : DbContext
 {
     public DbSet<Blog> Blogs { get; set; }
@@ -64,12 +70,15 @@ public class BlogImage
     public int BlogForeignKey { get; set; }
     public Blog Blog { get; set; }
 }
+
 ```
 </details>
 
 <details>
 <summary>Exemplo de código de relação muitos para muitos (n-n)</summary> 
+ 
 ```cs
+
  class MyContext : DbContext
 {
     public DbSet<Post> Posts { get; set; }
@@ -116,6 +125,7 @@ public class PostTag
     public string TagId { get; set; }
     public Tag Tag { get; set; }
 }
+
 ```
 </details>
 
