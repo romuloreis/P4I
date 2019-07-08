@@ -14,7 +14,7 @@ Em um cenário onde haja uma tabela **Post** e uma tabela **Comentários**, qual
 
 Descubra como fazer isso por meio desse **[ARTIGO](https://docs.microsoft.com/pt-br/ef/core/saving/cascade-delete)**
 
-## Material 
+# Material 
  - [Ambeinte](aspnetcoremvc/ambiente.md)
  - [Criando Projeto](aspnetcoremvc/criandoprojeto.md)
  - [Criando Department](aspnetcoremvc/department.md)
@@ -25,17 +25,17 @@ Descubra como fazer isso por meio desse **[ARTIGO](https://docs.microsoft.com/pt
  - [Tipos de notações (resumo)](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/annotations.md)
  
  
- ## Seeding Service
+ # Seeding Service
   - [Código SeedingService](aspnetcoremvc/seedingservice.md)
   - [Código Index de Sellers](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/notas-aula.md)
   
-  ## Projetos feitos em aula atualizados
+  # Projetos feitos em aula atualizados
    - [Projeto ualmart - download](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/ualmart.zip)
    - [Projeto Blog Relacional](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/SuperBlogRelacional.zip)
    - [Projeto Validação](https://github.com/romuloreis/P4I/blob/master/aspnetcoremvc/ValidationApplication.zip)
    
    
-   ## Material
+   # Material
    
    - [Criando Modelos](https://docs.microsoft.com/pt-br/ef/core/modeling/)
    - [Modelagem do banco de dados](https://docs.microsoft.com/pt-br/ef/core/modeling/relational/)
@@ -51,7 +51,7 @@ Descubra como fazer isso por meio desse **[ARTIGO](https://docs.microsoft.com/pt
    **New: ** [Consultas](https://docs.microsoft.com/pt-br/ef/core/querying/)
    - [Paginação, caixa de pesquisa e filtros](https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/sort-filter-page?view=aspnetcore-2.2)
    
-   ## Material Extra
+   # Material Extra
    
   - [Explicação sobre validação em pt-br](https://docs.microsoft.com/pt-br/aspnet/core/mvc/models/validation?view=aspnetcore-2.1)
   - [Artigo sobre validação de números de telefone](https://sensibledev.com/phone-number-validation-in-asp-net/)
