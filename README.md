@@ -1,6 +1,40 @@
 # Projetos desenvolvidos na cadeira de Programação para Internet III
 
 # Tópicos semi-diários
+## Globalização e localização no ASP.NET Core
+Se você pretende suportar multiplas línguas na sua aplicação, você deve começar por esse [ARTIGO](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/localization?view=aspnetcore-2.2). Aqui também entra questões culturais, como ordem pradrão das datas dd/mm/aaaa ou mm/dd/aaaa, marcador de casa decimal _,_ ou _._ e símbolo monetário da moeda vigente no país do usuário.
+
+
+## Definição de localidade (_Locale_) e Formatação de datas & números
+Em Startup.cs, vamos definir as opções de localidade
+
+```cs
+
+/*Não esqueça de importar*/
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+
+``` 
+
+no método Configure()
+
+```cs
+
+            //Instância um objeto CultureInfo
+            var enUS = new CultureInfo("en-US");
+            //Instância a opção de localização, com um conjunto de definições
+            var localizationOption = new RequestLocalizationOptions
+            {
+                //Definição da Cultura padrão
+                DefaultRequestCulture = new RequestCulture(enUS),
+                SupportedCultures = new List<CultureInfo> { enUS },
+                SupportedUICultures = new List<CultureInfo> { enUS }
+            };
+
+            //Define o Locale padrão
+            app.UseRequestLocalization(localizationOption);
+```
+
 ## Relações (Apenas Model)
 
 Para saber mais sobre relações acesse esse [ARTIGO](https://docs.microsoft.com/pt-br/ef/core/modeling/relationships)
