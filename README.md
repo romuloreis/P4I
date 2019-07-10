@@ -73,6 +73,23 @@ Como por exemplo definir o número de casas decimais que você deseja mostrar ou
         [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
         public DateTime BirthDate { get; set; }
  ```
+
+## ViewModel
+
+Uma ViewModel é uma classe para ser usada especificamente em uma view. 
+Com ela é possivel trabalhar com conjuntos de objetos contendo somente as propriedades necessárias de cada entidade/model.
+
+            > Há três formas de passar dados para a View:
+            > ViewBag - Sem verificação de erros - erros em runtime
+            > ViewData - Verificação de erros pré compilação
+            > Direto via parametro do return IActionResult
+            
+            > Essas duas syntaxes são equivalentes
+            > ViewBag.livors = Livros.GetAll();
+            > ViewData["livros"] = Livros.GetAll();
+            >
+            > return View(meus_dados);
+            > Note que você declara @model com letra minúscula, mas acessa Model com letra maiúscula
  
 ## Relações (Apenas Model)
 
