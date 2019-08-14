@@ -219,3 +219,123 @@ O código abaixo é um exemplo de comparação de duas string usando o método S
                 Console.ReadKey();  
 
 ```
+
+## CLASSES
+
+Por padrão, os nomes das classes e seus arquivos inicial com letra maiuscula.
+O nome da classe deve usar palavra _class_ antes da declaração.
+O nome da classe deve ser o mesmo nome do arquivo.cs
+variáveis dentro da classe, essas variáveis são os atributos.
+
+```cs
+//Conta.cs
+
+class Conta
+{
+	int	numero;
+	string	titular;
+	double	saldo;
+}
+
+```
+Para instanciar um objeto, podemos usar a seguinte sintaxe:
+
+```cs
+//Instância um objeto
+new Conta();
+//Atribui uma nova instância à x
+Conta x = new Conta();
+//Note que vai ocorrer um erro, pois os atributos são privados e não estão publicos
+x.numero = 2;
+```
+Para que os atributos sejam acessiveis, é necessário torna-los publicos, usando a palavra _public_
+
+	> Explicar referência de memória, indicando que o x aponta para o endereço de memória onde está armazenado o objeto (39-40)
+
+```cs
+//Conta.cs
+class Conta
+{
+	public int numero;
+	public string titular;
+	public double saldo;
+}
+
+```
+
+```cs
+
+Conta x = new Conta();
+x.numero = 2;
+
+```
+
+
+### MÉTODOS
+
+```cs
+//Método que não devolve nada _void_
+public void Saca()
+{
+	if(this.saldo >=100.0)
+	{
+		this.saldo-=100.0;
+	}
+}
+```
+
+```cs
+
+//Método que devolve um valor _bool_
+public	bool	Saca(double	valor)
+{
+	if(this.saldo>=valor)
+	{
+	this.saldo-=valor;
+	return true;
+	}
+	else
+	{
+	return false;
+	}
+}
+```
+
+
+```cs
+//Pegando retorno do método (42-44)
+Conta	c	=	new	Conta();
+//	inicializa	os	atributos
+bool teste = c.Saca(100.0);
+if(c.Saca(100.0))
+{
+MessageBox.Show("Saque	realizado	com	sucesso");
+}
+else
+{
+MessageBox.Show("Saldo	Insuficiente");
+}
+```
+
+### ARGUMENTOS E PARAMETROS
+
+public void (int a, string b)
+{
+//IMPLEMENTAÇÃO
+}
+
+
+### FIZZBUZZ
+
+###  COMPOSIÇÃO DE CLASSES
+
+Conta tem Titular
+
+
+### ENCAPSULAMENTO E MODIFICADORES DE ACESSO
+
+
+### CONTROLANDO O ACESSO COM PROPERTIES E AUTO PROPERTIES E SUAS NOMECLATURAS
+
+### CONSTRUTORES
+
