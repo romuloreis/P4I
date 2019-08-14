@@ -4,33 +4,32 @@
 
 ```cs
 
-if	(condicao)	
-{
-				//	Esse	código	será	executado	somente	se	a	condição	for	verdadeira
+if(condicao)	
+{//Esse	código	será executado	somente	se a condição for verdadeira
 }
 
 
 
-double	n1	=	100.0;
-double	n2	=	10.0;
-if	(sn1	>=	n2)	
+double n1=100.0;
+double n2=10.0;
+if	(sn1>=n2)	
 {
-				n1	+=	n2;
+	n1	+=	n2;
 }
 
 
 
-double	n1	=	100.0;
-double	n2	=	10.0;
-if	(sn1	>=	n2)	
+double n1=100.0;
+double n2=10.0;
+if(sn1>=n2)	
 {
-				n1	+=	n2;
-}else{
-      n1	-=	n2;
+	n1+=n2;
+}else if(n1!=n2){
+	n1-=n2;
 }
 
 
-bool	souJovem	=	(idade	>=	18)	&&	(idade <	80);
+bool souJovem=(idade>=18)&&(idade<80);
 
 ```
 
@@ -41,17 +40,17 @@ bool	souJovem	=	(idade	>=	18)	&&	(idade <	80);
 
 ```cs
 
-for	(inicialização;	condição;	atualização)
+for(inicialização; condição; atualização)
 {
-				//	Esse	código	será	executado	enquanto	a	condição	for	verdadeira
+//	Esse	código	será	executado	enquanto	a	condição	for	verdadeira
 }
 
 
 double	valor	=	1000.0;
 //Começar em 0 ou 1 faz diferença, afinal repere até que a condição seja verdadeira
-for	(int	i	=	1;	i	<=	10;	i	+=	1)
+for(int i=1;i<= 10;i+=1)
 {
-				valor	=	valor	*	1.5;
+valor=valor*1.5;
 }
 
 
@@ -66,13 +65,13 @@ double	valor	=	1000.0;
 int	i	=	1;
 while	(i	<=	10)
 {
-				valor	=	valor	*	1.9;
-				i	+=	1;
+	valor	=	valor	*	1.9;
+	i	+=	1;
 }
 
 do
 {
-				//	corpo	do	loop
+	//	corpo	do	loop
 }
 while(condição);
 
