@@ -254,17 +254,6 @@ Conta filtradas = contas.Where(c => c.Saldo % 2 == 0);
 
 ```
 
-```cs
-            //apenas o nome e não todo o objeto... o Select permite fazer projeções
-            var r2 = products.Where(p => p.Category.Name == "Tools").Select(p => p.Name);
-            Print("NAMES OF PRODUCTS FROM TOOLS", r2);
-            
-            //objeto anonimo, cria um objeto de uma classe não existente no projeto
-            //Note que categoryName é um alias-apelino para p.category.name, pois daria contradição com o p.name
-            var r3 = products.Where(p => p.Name[0] == 'C').Select(p => new { p.Name, p.Price, CategoryName = p.Category.Name });
-            Print("NAMES STARTED WITH 'C' AND ANONYMOUS OBJECT", r3);
-
-```
 
 ## 	OUTROS	MÉTODOS	DO	LINQ 
 
@@ -303,6 +292,28 @@ Quando	utilizamos	esses	métodos	de	agregação	em	uma	lista	com	tipos	primitivo
 ```cs
 List<double>	saldos	=	//	inicializa	a	lista
 double media = saldos.Average();
+```
+
+## PROJETO CATEGORIA E PRODUTO
+
+```cs
+            //apenas o nome e não todo o objeto... o Select permite fazer projeções
+            var r2 = products.Where(p => p.Category.Name == "Tools").Select(p => p.Name);
+            Print("NAMES OF PRODUCTS FROM TOOLS", r2);
+            
+            //objeto anonimo, cria um objeto de uma classe não existente no projeto
+            //Note que categoryName é um alias-apelino para p.category.name, pois daria contradição com o p.name
+            var r3 = products.Where(p => p.Name[0] == 'C').Select(p => new { p.Name, p.Price, CategoryName = p.Category.Name });
+            Print("NAMES STARTED WITH 'C' AND ANONYMOUS OBJECT", r3);
+            
+            //como vai dar vazio, pois não há price maior que 3000... 
+             var r7 = products.Where(p => p.Price > 3000.0).FirstOrDefault();
+             
+             //tipo de retorno Product
+             var r8 = products.Where(p => p.Id == 3).SingleOrDefault();
+             //tipo de retorno IEnumerable
+             var r8 = products.Where(p => p.Id == 3);
+
 ```
 
 ## UTILIZANDO	O	LINQ	COM	OUTROS	TIPOS
