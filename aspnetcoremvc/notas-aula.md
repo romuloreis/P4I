@@ -243,14 +243,14 @@ Mas	como	passar	a	condição	para	esse	filtro?	Teríamos	que	enviar	um	bloco	de	
 
 ```cs
 
-Conta	filtradas	=	contas.Where(c	=>	c.Saldo	>	2000);
+Conta filtradas = contas.Where(c => c.Saldo	> 2000);
 
 ```
 
 **outro exemplo:**
 ```cs
 
-Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0);
+Conta filtradas = contas.Where(c => c.Saldo % 2 == 0);
 
 ```
 
@@ -259,38 +259,38 @@ Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0);
 Somar o saldo de todas as contas 
 ```cs
     List<Conta>	contas	=	//	inicializa	a	lista	de	contas 
-    double	total	=	0.0;
-    foreach(Conta	c	in	contas) {				
-        total	+=	c.Saldo;
+    double	total = 0.0;
+    foreach(Conta c in contas) {				
+        total += c.Saldo;
     } 
  ```
  
  Quando	queremos	fazer	a	soma	dos elementos	de	uma	lista,	podemos	utilizar	o	método	Sum	do	LINQ,	passando	um	lambda	que	fala	qual	é a	propriedade	da	conta	que	queremos	somar:
 
 ```cs
-double	total	=	contas.Sum(c	=>	c.Saldo);
+double total = contas.Sum(c	=>c.Saldo);
 ```
 
 Com	essa	linha	de	código	conseguimos	o	mesmo	efeito	do		foreach		anterior.	Além	do		Sum	, também	podemos	utilizar	o	método	Average	para	calcular	a	média	dos	valores,	Count	para	contar	o número	de	valores	que	obedecem	algum	critério,	Min	para	calcular	o	menor	valor	e	Max	para	calcular	o maior	valor:
 
 ```cs
-List<Conta>	contas	=	//	inicializa	a	lista
+List<Conta> contas=	//	inicializa	a	lista
     
 //	soma	dos	saldos	de	todas	as	contas
-double	saldoTotal	=	contas.Sum(c	=>	c.Saldo);
+double saldoTotal = contas.Sum(c => c.Saldo);
 //	media	do	saldo	das	contas 
-double	mediaDosSaldos	=	contas.Average(c	=>	c.Saldo);
+double mediaDosSaldos = contas.Average(c => c.Saldo);
 //	número	de	contas	que	possuem	Numero	menor	do	que	1000 
-int	numero	=	contas.Count(c	=>	c.Numero	<	1000);
-int	menorNumero	=	contas.Min(c	=>	c.Numero);
-double	maiorSaldo	=	contas.Max(c	=>	c.Saldo); 
+int	numero = contas.Count(c => c.Numero < 1000);
+int	menorNumero = contas.Min(c=>c.Numero);
+double maiorSaldo = contas.Max(c => c.Saldo); 
 ```
 
 Quando	utilizamos	esses	métodos	de	agregação	em	uma	lista	com	tipos	primitivos,	o	lambda	é	um argumento	opcional.	Por	exemplo,	se	tivéssemos	uma	lista	de		double	,	poderíamos	utilizar	o	seguinte código	para	calcular	a	média	dos	números:
 
 ```cs
 List<double>	saldos	=	//	inicializa	a	lista
-double	media	=	saldos.Average();
+double media = saldos.Average();
 ```
 
 ## UTILIZANDO	O	LINQ	COM	OUTROS	TIPOS
@@ -299,53 +299,53 @@ Podemos	utilizar	o	LINQ	com	qualquer	objeto	que	implemente	a	interface		IEnumera
 **outro exemplo:**
 ```cs
 //Aplica uma função a cada resultado da função primária
-Conta	filtradas	=	contas.Where(c	=>	c.Saldo % 2 == 0	).Select(z => z*10);
+Conta filtradas=contas.Where(c=>c.Saldo % 2 == 0).Select(z => z*10);
 ```
 
 ## OUTROS FILTROS (OrderBy, ThenBy)																				
 .ThenBy()
 
 ```cs
-var	resultado	=	contas
-.Where(c	=>	c.Saldo	>	10000)																				
-.OrderBy(c	=>	c.Titular.Nome)																				
-.ThenBy(c	=>	c.Numero);
+var	resultado = contas
+.Where(c => c.Saldo > 10000)																				
+.OrderBy(c => c.Titular.Nome)																				
+.ThenBy(c => c.Numero);
 ```
 
 ## MELHORANDO	AS	BUSCAS	UTILIZANDO	A	SINTAXE	DE	QUERIES 
 
 ```cs
-var	filtradas	=	from	c	in	contas
-where	c.Numero	<	2000																
-select	c;
+var	filtradas = from c in contas
+where c.Numero < 2000																
+select c;
 ```
 
 ## 	PROJEÇÕES	E	OBJETOS	ANÔNIMOS
 
 ```cs
-var	resultado	=	from	c	in	contas
-where	<condição	da	busca>
-select	new	{	c.Numero,	c.Titular	}; 
+var	resultado = from c in contas
+where <condição da busca>
+select new { c.Numero, c.Titular }; 
 ```
 
 ## 	ORDENANDO	COLEÇÕES	COM	LINQ
 
 ```cs
-List<Conta>	contas	=	//	inicializa	a	lista	de	contas 
-    var	resultado	=	from	c	in	contas
-    where	c.Saldo	>	10000																
-    orderby	c.Titular.Nome	descending,	c.Numero	descending																
-    select	c;
+List<Conta>	contas =//inicializa a lista de contas 
+    var	resultado = from c in contas
+    where c.Saldo	> 10000																
+    orderby	c.Titular.Nome	descending,	c.Numero descending																
+    select c;
 ```
 
 ## Convertendo
 
 ```cs
-IEnumerable<Conta>	contas	=	//	inicializa	a	lista	de	contas 
-    List<Conta>	resultado	=	from	c	in	contas
-    where	c.Saldo	>	10000																
-    orderby	c.Titular.Nome	descending,	c.Numero	descending																
-    select	c;
+    IEnumerable<Conta> contas = // inicializa a lista de contas 
+    List<Conta>	resultado = from c in contas
+    where c.Saldo	> 10000																
+    orderby c.Titular.Nome descending,	c.Numero descending																
+    select c;
 ```
 
 ## Seleções mais complexas
