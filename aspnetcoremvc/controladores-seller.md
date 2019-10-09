@@ -57,11 +57,12 @@ Altere o título para Sellers
 ```
 
 
-## SellerService (Serviço de acesso aos dados)
+# SellerService (Serviço de acesso aos dados)
 
 **Contextualizando - Camada Serviços**
 Ao usar scaffold, o código gerado automaticamente atribui ao Controller
 a responsabilidade de implementar regras de negócio e acessar os dados pelo EntityFramework.
+
 Note em _DepartmentController_ que a classe tem uma referência ao CONTEXT do banco e faz as 
 chamadas ao EntityFramework diretamente. E as regras de negócio são definidas e aplicadas nele, 
 porém essa não é uma prática recomendável.
@@ -76,6 +77,7 @@ Não vamos implementar os repositories (objetos que acessam os dados), pois noss
 já implementa repositories.
 
 Então vamos implementar serviços...
+
 A classe _NomeClasseService_ vai ser responsável por realizar operações relacionada a classe _NomeClasse_ e 
 também será responsável por implementar as regras de negócio, como restrições para salvar dados no banco.
 Pois, não é no controller que às regras de negócio devem ser implementadas.
@@ -90,12 +92,17 @@ será responsável por acessar e persistir os dados/registros relacionados
 à classe _Seller_.
 
 No arquivo _Startup.cs_, vamos registrar esse serviço na injeção de dependência do sistema.
+
 Assim, minhas instâncias de classes poderão acessar esse serviço.
+
 Para isso basta adicionar o trecho de código abaixo ao final do método _ConfigureServices_:
 
 ```cs
-services.AddScoped<SellerService>();
+ services.AddScoped<SellerService>();
 ```
+
+Recomendo a leitura desse texto sobre [injeção de dependência](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0).
+
 
 ## Criando injeção de dependência com o Banco
 
@@ -159,9 +166,13 @@ public class SellersController : Controller
 ## Cirando View Index de Sellers
 
 Agora vamos criar um template de View para listar os vendedores na tela.
+
 Em **Views/Sellers/Index.cshtml**, vamos criar o código para manipular os dados.
+
 Primeiramente, criar o objeto @model, que corresponde ao objeto que passamos como argumento do controller para a View. 
+
 Nesse caso, nosso @model recebe uma lista de objetos que passamos por “return View(list)” no controller.
+
 Declare o tipo de objeto que o objeto @model vai receber do controller, neste caso vamos usar o tipo IEnumerable, 
 pois é bem genérico e recebe lista, conjuntos, etc.
 
